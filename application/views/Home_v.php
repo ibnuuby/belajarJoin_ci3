@@ -9,7 +9,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
+  </head>
+  <body>
+    <div class="card-body">
+    <div class="container">
+    <a class="btn btn-primary" href="<?= base_url('biodata/tambahdata'); ?>" >Tambah Data</a>
+    </div>
     <div class="container">
         <table class="table">
         
@@ -36,17 +41,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <tr>
           <th scope="row"><?= $no++; ?></th>
           <td><?= $value->nama; ?></td>
-          <td><?= $value->tanggal_lahir; ?></td>
+          <td><?= date('d-m-Y'); ?></td>
           <td><?= $value->alamat; ?></td>
           <td><?= $value->pekerjaan; ?></td>
           <td><?= $value->pendidikan; ?></td>
-          <?php if($value->umur > 20) : ?>
-            <td><?= $value->umur ?></td>
-          <?php endif; ?>
+          <td><?= $value->umur ?></td>
           <td><?= $value->hoby; ?></td>
           <td><?= $value->status; ?></td>
           <td>
-              <a href="" type="button" class="btn btn-primary">Edit</a>
+              <a href="<?= base_url('biodata/edit/'. $value->id_identitas); ?>" type="button" class="btn btn-primary">Edit</a>
               <a href="" type="button" class="btn btn-danger">Delete</a>
           </td>
         </tr>
@@ -59,13 +62,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      
     </table>
     </div>
+    </div>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    
 
     <!-- Optional JavaScript; choose one of the two! -->
 
