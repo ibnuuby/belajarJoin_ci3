@@ -34,27 +34,51 @@ class Indentitas_M extends CI_Model{
         $hoby           = $this->input->post('hoby', true);
         $status         = $this->input->post('status', true);
 
-		$data1 = array (
+		
+		$data = array (
 			'nama'          => $nama,
 			'tanggal_lahir' => $tanggal_lahir,
-			
-		);
-		$data2 = array (
 			'alamat'        => $alamat,
 			'pekerjaan'     => $pekerjaan,
 			'pendidikan'    => $pendidikan,
-			
-		);
-
-		$data3 = array(
 			'umur'          => $umur,
 			'hoby'          => $hoby,
 			'status'        => $status
 		);
-		
-		$this->db->insert('indentitas', $data1);
-		$this->db->insert('indentitas2', $data2);
-		$this->db->insert('indentitas3', $data3);
+
+		$query = "INSERT INTO indentitas(nama,tanggal_lahir,) OUTPUT INSERTED. ''";
+		$this->db->insert('indentitas', $data);
+		$this->db->insert('indentitas2', $data);
+		$this->db->insert('indentitas3', $data);
 		
 	}
 }
+
+
+// $data1 = array (
+		// 	'nama'          => $nama,
+		// 	'tanggal_lahir' => $tanggal_lahir,
+			
+		// );
+		// $data2 = array (
+		// 	'alamat'        => $alamat,
+		// 	'pekerjaan'     => $pekerjaan,
+		// 	'pendidikan'    => $pendidikan,
+			
+		// );
+
+		// $data3 = array(
+		// 	'umur'          => $umur,
+		// 	'hoby'          => $hoby,
+		// 	'status'        => $status
+		// );
+
+		// $query = mysqli_query($koneksi,"INSERT INTO pendaftar (no,nama,nama_panggilan,tpt_lahir,tgl_lahir,asal_sekolah,jurusan,nisn,nohp,nowa,line,instagram,hobi,cita_cita,tgl_mulai_pkl,tgl_akhir_pkl,alamat,nama_ayah,nohp_ayah,pekerjaan_ayah,nama_ibu,nohp_ibu,pekerjaan_ibu,jenkel) VALUES ('$no','$nama','$nama_panggilan','$tpt_lahir','$tgl_lahir','$asal_sekolah','$jurusan','$nisn','$nohp','$nowa','$line','$instagram','$hobi','$cita_cita','$tgl_mulai_pkl','$tgl_akhir_pkl','$alamat','$nama_ayah','$nohp_ayah','$pekerjaan_ayah','$nama_ibu','$nohp_ibu','$pekerjaan_ibu','$jenkel')"); or die(mysqli_error());
+
+		// if($query){
+		// $input = myesqli_query($koneksi, "INSERT INTO etika (no_etika,etika1,etika2,etika3,etika4,etika5,etika6,etika7,etika8,etika9,etika10,etika11,etika12)VALUES('$no_etika','$etika1','$etika2','$etika3','$etika4','$etika5','$etika6','$etika7','$etika8','$etika9','$etika10','$etika11','$etika12')"); or die(mysqli_error());
+
+		// echo " berhasil";
+		// }else{
+		// echo "gagal ";
+		// }
