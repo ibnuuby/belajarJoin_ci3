@@ -13,9 +13,27 @@
     <div class="container">
     <?php 
     $att = array('method'=>"post");
-    echo form_open_multipart('biodata/prosestambahdata',$att)?>
+    echo form_open_multipart('biodata/prosestambahdata',$att)
+    
+  ?>
+      <?php   foreach($data as $value) {  ?>
+
+    <?php 
+    
+          $key1 = $value->id_indentitas2;
+          $key2 = $key1 + 1;
+        
+          $key3 = $value->id_indentitas3;
+          $key4 = $key3 + 1;  
+          
+    ?>
+    <input type="hidden" name="id_indentitas2" value="<?php echo $key2; ?>">
+    <input type="hidden" name="id_indentitas3" value="<?php echo $key4; ?>">
+
+    <?php } ?>
     <div class="row g-3">
   <div class="col-md-6">
+
     <label class="form-label">Nama</label>
     <input type="text" class="form-control" name="nama">
   </div>

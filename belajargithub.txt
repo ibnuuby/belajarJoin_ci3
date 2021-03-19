@@ -2,10 +2,12 @@
 echo "# test" >> README.md
 git init
 git add README.md
-git commit -m "three commit"
+git commit -m "for commit"
 git branch -M main
 git remote add origin https://github.com/ibnuubaeydillah13/test.git
 git push -u origin main
+
+https://github.com/ibnuubaeydillah13/belajarJoin_ci3
 
 …or push an existing repository from the command line
 git remote add origin https://github.com/ibnuubaeydillah13/test.git

@@ -16,7 +16,7 @@ class Biodata extends CI_Controller {
 
 		// db_ci3jointable
 		$data['biodata'] = $this->Indentitas_M->getData();
-		var_dump($data);
+		// var_dump($data);
 		// $data['biodata'] = $this->db->query("SELECT * FROM indentitas")->result();
 		$this->load->view('Home_v', $data);
 	}
@@ -30,13 +30,15 @@ class Biodata extends CI_Controller {
 	}
 	public function tambahdata(){
 
-		$this->load->view('TambahData_v');
+		$data['data'] = $this->Indentitas_M->getambahData();
+		
+		
+		$this->load->view('TambahData_v', $data);
 	}
 	
 	public function prosestambahdata(){
 		$all = array();
 		$this->Indentitas_M->insertdata($all);
-
 		redirect('biodata');
 	}
 	public function delete($id){

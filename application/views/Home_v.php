@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class="container">
         <table class="table">
         
-      <thead>
+     
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nama</th>
@@ -31,17 +31,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <th scope="col">Status</th>
           <th scope="col">Action</th>
         </tr>
-      </thead>
-      <tbody>
-      <?php
+  
+        <?php
         $no = 1;
-        foreach($biodata as $value) : 
+        foreach($biodata as $value) { 
         
         ?>
         <tr>
           <th scope="row"><?= $no++; ?></th>
           <td><?= $value->nama; ?></td>
-          <td><?= date('d-m-Y'); ?></td>
+          <td><?= $value->tanggal_lahir ?></td>
           <td><?= $value->alamat; ?></td>
           <td><?= $value->pekerjaan; ?></td>
           <td><?= $value->pendidikan; ?></td>
@@ -53,8 +52,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <a href="" type="button" class="btn btn-danger">Delete</a>
           </td>
         </tr>
-      </tbody>
-      <?php endforeach; ?>
+        <?php
+        }
+        
+        ?>
     </table>
     <h4>Data Jumlah</h4>
     <table>
