@@ -20,9 +20,15 @@ class Biodata extends CI_Controller {
 		// $data['biodata'] = $this->db->query("SELECT * FROM indentitas")->result();
 		$this->load->view('Home_v', $data);
 	}
-	public function edit($id){
+	public function edit($id,$id2,$id3){
 
-		$data['bioedit'] = $this->Indentitas_M->editData($id);
+		$where = array (
+			'id_indentitas'  => $id,
+			'id_indentitas2' => $id2,
+			'id_indentitas3' => $id3
+		);
+		
+		$data['bioedit'] = $this->Indentitas_M->editData($where);
 	
 		// $this->Indentitas_M->editData($id);
 		$this->load->view('Edit_v', $data);

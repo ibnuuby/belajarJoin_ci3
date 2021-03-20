@@ -2,7 +2,7 @@
 echo "# test" >> README.md
 git init
 git add README.md
-git commit -m "for commit"
+git commit -m "insert data"
 git branch -M main
 git remote add origin https://github.com/ibnuubaeydillah13/test.git
 git push -u origin main
@@ -13,6 +13,6 @@ https://github.com/ibnuubaeydillah13/belajarJoin_ci3
 git remote add origin https://github.com/ibnuubaeydillah13/test.git
 git branch -M main
 git push -u origin main
-
+git remote add origin
 
 git remote add origin https://github.com/ibnuubaeydillah13/belajarJoin_ci3.git

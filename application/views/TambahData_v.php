@@ -11,6 +11,7 @@
 <body>
   <div class="card-body">
     <div class="container">
+    
     <?php 
     $att = array('method'=>"post");
     echo form_open_multipart('biodata/prosestambahdata',$att)

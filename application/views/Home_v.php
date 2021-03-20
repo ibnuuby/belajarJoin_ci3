@@ -13,11 +13,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <body>
     <div class="card-body">
     <div class="container">
+  
     <a class="btn btn-primary" href="<?= base_url('biodata/tambahdata'); ?>" >Tambah Data</a>
     </div>
-    <div class="container">
+    
+    <div class="container"><br>
         <table class="table">
-        
+        <div class="search-container">
+    <form>
+      <input type="text" placeholder="cari..." class="" name="search">
+      <button type="button" >cari</button>
+    </form>
+  </div>
      
         <tr>
           <th scope="col">#</th>

@@ -33,9 +33,18 @@ class Indentitas_M extends CI_Model{
 				INNER JOIN indentitas3
 			ON indentitas.id_indentitas3 = indentitas3.id_indentitas3")->result();
 	}
-	public function editData($id){
+	public function editData($id,$id2,$id3){
 		
-		return $this->db->get_where('indentitas', array('id_identitas' => $id))->result_array();
+		return $this->db->get_where('indentitas','indentitas2','indentitas3', 
+		array(
+			
+			'id_identitas' => $id,
+			'id_indentitas2' => $id2,
+			'id_indentitas3' => $id3
+		
+		)
+		
+		)->result();
 		
 	}
 	public function insertdata(){

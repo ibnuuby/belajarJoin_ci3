@@ -11,41 +11,45 @@
 <body>
     <div class="container">
     <form class="row g-3">
+    <?php foreach($bioedit as $value) { 
+     var_dump($bioedit);
+      ?>
   <div class="col-md-6">
     <label class="form-label">Nama</label>
-    <input type="text" class="form-control" name="nama">
+    <input type="text" class="form-control" name="nama" value="<?= $value->nama; ?>">
   </div>
   <div class="col-md-6">  
     <label class="form-label">Tanggal Lahir</label>
-    <input type="text" class="form-control" name="tanggal_lahir">
+    <input type="text" class="form-control" name="tanggal_lahir" value="<?= $value->tanggal_lahir; ?>">
   </div>
   <div class="col-12">
     <label class="form-label">Alamat</label>
-    <input type="text" class="form-control" name="alamat">
+    <input type="text" class="form-control" name="alamat" value="<?= $value->alamat; ?>">
   </div>
   <div class="col-12">
     <label class="form-label">Pekerjaan</label>
-    <input type="text" class="form-control" name="pekerjaan">
+    <input type="text" class="form-control" name="pekerjaan" value="<?= $value->pekerjaan; ?>">
   </div>
   <div class="col-md-6">
     <label class="form-label">Pendidikan</label>
-    <input type="text" class="form-control" name="pendidikan">
+    <input type="text" class="form-control" name="pendidikan" value="<?= $value->pendidikan; ?>">
   </div>
   <div class="col-md-2">
     <label class="form-label">Umur</label>
-    <input type="text" class="form-control" name="umur">
+    <input type="text" class="form-control" name="umur" value="<?= $value->umur; ?>">
   </div>
   <div class="col-md-2">
     <label class="form-label">Hoby</label>
-    <input type="text" class="form-control" name="umur">
+    <input type="text" class="form-control" name="hoby" value="<?= $value->hoby; ?>">
   </div>
   <div class="col-md-2">
     <label class="form-label">Status</label>
-    <input type="text" class="form-control" name="status">
+    <input type="text" class="form-control" name="status" value="<?= $value->status; ?>">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary">Simpan</button>
   </div>
+  <?php } ?>
 </form>
 
 
