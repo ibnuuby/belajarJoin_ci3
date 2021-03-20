@@ -49,8 +49,8 @@ class Indentitas_M extends CI_Model{
 	}
 	public function insertdata(){
 
-        $id_indentitas2 = $this->input->post('id_indentitas2');
-        $id_indentitas3 = $this->input->post('id_indentitas3');
+        // $id_indentitas2 = $this->input->post('id_indentitas2');
+        // $id_indentitas3 = $this->input->post('id_indentitas3');
 		$nama           = $this->input->post('nama', true);
         $tanggal_lahir  = $this->input->post('tanggal_lahir', true);
         $alamat         = $this->input->post('alamat', true);
@@ -60,33 +60,45 @@ class Indentitas_M extends CI_Model{
         $hoby           = $this->input->post('hoby', true);
         $status         = $this->input->post('status', true);
 
-		$data1 = array (
+		// $data1 = array (
+		// 	'nama'           => $nama,
+		// 	'tanggal_lahir'  => $tanggal_lahir
+		// 	// 'id_indentitas2' => $id_indentitas2,
+		// 	// 'id_indentitas3' => $id_indentitas3
+			
+		// );
+
+		// $this->db->insert('indentitas', $data1);
+		
+		// $data2 = array (
+		// 	'alamat'        => $alamat,
+		// 	'pekerjaan'     => $pekerjaan,
+		// 	'pendidikan'    => $pendidikan,
+			
+		// );
+		
+		// $this->db->insert('indentitas2', $data2);
+		
+		// $data3 = array(
+		// 	'umur'          => $umur,
+		// 	'hoby'          => $hoby,
+		// 	'status'        => $status
+		// );
+		
+		// $this->db->insert('indentitas3', $data3);
+
+		$data = array (
 			'nama'           => $nama,
 			'tanggal_lahir'  => $tanggal_lahir,
-			'id_indentitas2' => $id_indentitas2,
-			'id_indentitas3' => $id_indentitas3
-			
-		);
-
-		$this->db->insert('indentitas', $data1);
-		
-		$data2 = array (
-			'alamat'        => $alamat,
-			'pekerjaan'     => $pekerjaan,
-			'pendidikan'    => $pendidikan,
-			
+			'alamat'         => $alamat,
+			'pekerjaan'      => $pekerjaan,
+			'pendidikan'     => $pendidikan,
+			'umur'           => $umur,
+		 	'hoby'           => $hoby,
+		 	'status'         => $status
 		);
 		
-		$this->db->insert('indentitas2', $data2);
-		
-		$data3 = array(
-			'umur'          => $umur,
-			'hoby'          => $hoby,
-			'status'        => $status
-		);
-		
-		$this->db->insert('indentitas3', $data3);
-		
+		$this->db->insert('indentitas, identitas2, indentitas3', $data);
 		
 	}
 }

@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <?php
         $no = 1;
         foreach($biodata as $value) { 
-        
+        var_dump($biodata);
         ?>
         <tr>
           <th scope="row"><?= $no++; ?></th>
